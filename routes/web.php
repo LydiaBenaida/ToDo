@@ -26,5 +26,5 @@ Auth::routes();
 
 
 Route::post('/home/store', 'TaskController@store')->name('home.store');
-Route::delete('/home/destroy', 'TaskController@destroy')->name('home.destroy');
+Route::delete('/home/destroy/{id}', 'TaskController@destroy')->name('home.destroy');
 

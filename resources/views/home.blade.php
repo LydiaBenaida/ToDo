@@ -39,6 +39,7 @@
                     </thead>
                     <tbody>
                     @foreach($task as $task)
+                        @if(auth()->user()->id == $task->user_id)
                     <tr>
 
                         <td style="width: 50%">{{$task->title}}</td>
@@ -52,6 +53,7 @@
                             </form>
                         </td>
                     </tr>
+                    @endif
                     @endforeach
                     </tbody>
                 </table>

@@ -37,7 +37,11 @@
             @if (Auth::check())
                 <p style="color: white;margin-right: 1%;margin-top: 1%" >{{Auth::user()->name}}</p>
 
-                <button class="btn btn-outline-danger my-2 my-sm-0" type="submit">LogOut</button>
+                <form action="{{route('logout')}} " method="POST">
+                    @csrf
+
+                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">logout</button>
+                </form>
             @endif
         </div>
     </nav>
